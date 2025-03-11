@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo en Temps Réel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Météo en Temps Réel</h1>
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Entrez le nom d'une ville..." autofocus>
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="weather-info">
+            <div id="loader" class="hidden">
+                <div class="spinner"></div>
+            </div>
+            <div id="weather-data" class="hidden">
+                <div class="location">
+                    <h2 id="city-name"></h2>
+                    <p id="country"></p>
+                </div>
+                <div class="temp-container">
+                    <img id="weather-icon" src="" alt="Icône météo">
+                    <p id="temperature"></p>
+                </div>
+                <p id="description"></p>
+                <div class="details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-low"></i>
+                        <div>
+                            <p>Ressentie</p>
+                            <p id="feels-like"></p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <p>Humidité</p>
+                            <p id="humidity"></p>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p>Vent</p>
+                            <p id="wind-speed"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="error-message" class="hidden"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
